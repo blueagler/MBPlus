@@ -1,0 +1,18 @@
+{
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "*://szmbs.managebac.cn/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "MBPlus",
+   "homepage_url": "https://github.com/liujunhao-github/MBPlus",
+   "icons": {
+      "128": "media/icons/icon.png",
+      "16": "media/icons/icon.png",
+      "48": "media/icons/icon.png"
+   },
+   "manifest_version": 2,
+   "name": "MBPlus",
+   "permissions": ["*://*/*"],
+   "version": "0.0.1"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "MBPlus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Austin",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "latest",
+    "style-loader": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}

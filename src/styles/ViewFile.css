@@ -1,0 +1,88 @@
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+.MBPlus_dropboxFileViewButton,
+.MBPlus_detailFileViewButton,
+.MBPlus_resourceFileViewButton {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+.MBPlus_dropboxFileViewButton svg path,
+.MBPlus_detailFileViewButton svg path,
+.MBPlus_resourceFileViewButton svg path {
+	fill: #859bbb;
+}
+.MBPlus_detailFileViewButton,
+.MBPlus_resourceFileViewButton {
+	position: absolute;
+}
+.MBPlus_detailFileViewButton svg,
+.MBPlus_resourceFileViewButton svg,
+.MBPlus_dropboxFileViewButton svg {
+	width: 20px;
+	height: 20px;
+	top: 15px;
+	left: 15px;
+	position: relative;
+}
+.MBPlus_resourceFileViewButton {
+	right: 0;
+}
+.MBPlus_officeViewWindow,
+.MBPlus_imageViewWindow,
+.MBPlus_pdfViewWindow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+.MBPlus_officeViewWindow iframe {
+	border: none;
+	width: 90%;
+	height: 90%;
+}
+.MBPlus_officeViewWindow > div,
+.MBPlus_imageViewWindow > div,
+.MBPlus_pdfViewWindow > div:first-child {
+	position: absolute;
+	width: 3%;
+	top: 1%;
+	right: 1%;
+	cursor: pointer;
+}
+.MBPlus_officeViewWindow > div > svg path,
+.MBPlus_imageViewWindow > div > svg path,
+.MBPlus_imageViewWindow > svg path,
+.MBPlus_pdfViewWindow > div:first-child > svg path,
+.MBPlus_pdfViewWindow > svg path {
+	fill: white;
+}
+.MBPlus_imageViewWindow > img,
+.MBPlus_officeViewWindow iframe,
+#MBPlus_pdfViewContainer {
+	position: absolute;
+	max-width: 90%;
+	max-height: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.MBPlus_imageViewWindow > svg,
+.MBPlus_pdfViewWindow > svg {
+	position: absolute;
+	z-index: 1;
+	top: 45%;
+	left: 45%;
+	width: 10%;
+	animation: rotate 3s linear infinite;
+}
