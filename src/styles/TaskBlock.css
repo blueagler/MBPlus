@@ -1,9 +1,9 @@
-.MBPlus_finishedTaskBlock {
+.MBPlus_waitingTaskBlock {
 	background: linear-gradient(134deg, #fee3be, #f8c67d) !important;
 	color: #582f1d !important;
 	box-shadow: 0 2px 4px #ffeaca !important;
 }
-.MBPlus_waitingTaskBlock {
+.MBPlus_simpleTaskBlock {
 	background: linear-gradient(134deg, #00d3ff, #00b7ff) !important;
 	color: #fff !important;
 	box-shadow: 0 2px 4px #00b7ff !important;
@@ -13,7 +13,7 @@
 	color: #fff !important;
 	box-shadow: 0 2px 4px #fe2e2e !important;
 }
-.MBPlus_simpleTaskBlock {
+.MBPlus_finishedTaskBlock {
 	background: linear-gradient(134deg, #16e05a, #16e09d) !important;
 	color: #f3f4f7 !important;
 	box-shadow: 0 2px 4px #16e09d !important;

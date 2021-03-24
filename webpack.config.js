@@ -16,7 +16,7 @@ module.exports = {
           keep_fnames: false,
           safari10: false,
           compress: {
-            drop_console: true,
+            drop_console: false,
             drop_debugger: true
           }
         },
@@ -39,8 +39,9 @@ module.exports = {
     // 设置别名
     alias: {
       '@': resolve('src'),
-      '^': resolve('src/functions'),
-      '%': resolve('src/styles')
+      '^': resolve('src/function'),
+      '%': resolve('src/styles'),
+      '&': resolve('src/component')
     }
   }
 }

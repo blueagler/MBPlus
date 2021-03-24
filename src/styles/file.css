@@ -1,11 +1,3 @@
-@keyframes rotate {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(359deg);
-	}
-}
 .MBPlus_dropboxFileViewButton,
 .MBPlus_detailFileViewButton,
 .MBPlus_resourceFileViewButton {
@@ -34,9 +26,7 @@
 .MBPlus_resourceFileViewButton {
 	right: 0;
 }
-.MBPlus_officeViewWindow,
-.MBPlus_imageViewWindow,
-.MBPlus_pdfViewWindow {
+.MBPlus_ViewWindow {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -45,44 +35,43 @@
 	top: 0;
 	background: rgba(0, 0, 0, 0.5);
 }
-.MBPlus_officeViewWindow iframe {
+.MBPlus_ViewWindow iframe,
+.dplayer:not(.dplayer-fulled) {
 	border: none;
-	width: 90%;
-	height: 90%;
+	width: 90% !important;
+	height: 90% !important;
 }
-.MBPlus_officeViewWindow > div,
-.MBPlus_imageViewWindow > div,
-.MBPlus_pdfViewWindow > div:first-child {
+#MBPlus_ViewClose {
 	position: absolute;
-	width: 3%;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
 	top: 1%;
 	right: 1%;
 	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
 }
-.MBPlus_officeViewWindow > div > svg path,
-.MBPlus_imageViewWindow > div > svg path,
-.MBPlus_imageViewWindow > svg path,
-.MBPlus_pdfViewWindow > div:first-child > svg path,
-.MBPlus_pdfViewWindow > svg path {
+#MBPlus_ViewClose svg path {
 	fill: white;
 }
-.MBPlus_imageViewWindow > img,
-.MBPlus_officeViewWindow iframe,
-#MBPlus_pdfViewContainer {
-	position: absolute;
+#MBPlus_ViewContainer img {
 	max-width: 90%;
 	max-height: 90%;
+}
+#MBPlus_ViewContainer img,
+.MBPlus_ViewWindow iframe,
+.dplayer:not(.dplayer-fulled) {
+	position: absolute !important;
+	z-index: 2;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 2;
 }
-.MBPlus_imageViewWindow > svg,
-.MBPlus_pdfViewWindow > svg {
+.MBPlus_ViewWindow > svg {
 	position: absolute;
 	z-index: 1;
 	top: 45%;
 	left: 45%;
 	width: 10%;
-	animation: rotate 3s linear infinite;
 }
